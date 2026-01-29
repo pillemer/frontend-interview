@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "./SingleApplication.module.css";
+import { Application } from "./Applications";
 
 const formatCurrency = (amount: number): string => {
   return `£${amount.toLocaleString("en-GB")}`;
@@ -13,33 +13,33 @@ const formatDate = (dateString: string): string => {
   return `${day}-${month}-${year}`;
 };
 
-const SingleApplication = ({ application }) => {
+const SingleApplication = ({ application }: { application: Application }) => {
   return (
     <div className={styles.SingleApplication}>
       <div className={styles.cell}>
-        <sub>Company</sub>
+        <span className={styles.label}>Company</span>
         {application.company}
       </div>
       <div className={styles.cell}>
-        <sub>Name</sub>
+        <span className={styles.label}>Name</span>
         {application.first_name} {application.last_name}
       </div>
       <div className={styles.cell}>
-        <sub>Email</sub>
+        <span className={styles.label}>Email</span>
         <a href={`mailto:${application.email}`} className={styles.emailLink}>
           {application.email}
         </a>
       </div>
       <div className={styles.cell}>
-        <sub>Loan amount</sub>
+        <span className={styles.label}>Loan amount</span>
         {formatCurrency(application.loan_amount)}
       </div>
       <div className={styles.cell}>
-        <sub>Application date</sub>
+        <span className={styles.label}>Application date</span>
         {formatDate(application.date_created)}
       </div>
       <div className={styles.cell}>
-        <sub>Expiry date</sub>
+        <span className={styles.label}>Expiry date</span>
         {formatDate(application.expiry_date)}
       </div>
     </div>

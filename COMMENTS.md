@@ -1,20 +1,7 @@
 # Comments
 
-## Approach
+Spent most of the time on the pagination logic - parsing the Link header to detect when we've hit the last page. The responsive breakpoints are rough estimates since I couldn't pull exact values from Figma.
 
-- Used the `Link` header to check if there are more pages to load. When there's no "next" link, the Load more button hides.
-- Added basic responsive styles for tablet and mobile views.
-- Made emails clickable and formatted the page according to the design.
+Assumed the `id` field is unique across applications for React keys. Didn't add error UI beyond console logging - would definitely want that for production but prioritised the core functionality first.
 
-## Assumptions
-
-- Each application has a unique `id` field for React keys.
-- The API will always return valid JSON (no defensive parsing).
-- All the styling had to be done by eye without access to the Figma design details.
-
-## What I'd improve
-
-- Add a proper error state.
-- Show a loading spinner instead of changing the button text.
-- Add more test coverage for error handling.
-- Move the API URL to an env variable.
+If I had more time I'd add a proper loading skeleton for the initial fetch and move the API URL to an env variable.

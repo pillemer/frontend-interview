@@ -3,7 +3,7 @@ import SingleApplication from "./SingleApplication";
 import { Button } from "./ui/Button/Button";
 import styles from "./Applications.module.css";
 
-interface Application {
+export interface Application {
   id: number;
   guid?: string;
   first_name: string;

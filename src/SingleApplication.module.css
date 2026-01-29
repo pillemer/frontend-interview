@@ -19,7 +19,7 @@
   text-align: right;
 }
 
-.cell sub {
+.label {
   display: block;
   font-size: 1rem;
   color: #777;

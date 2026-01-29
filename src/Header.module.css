@@ -1,12 +1,19 @@
 .Header {
-  padding: 20px 0;
+  padding: 32px 0;
   margin: 0 auto;
   text-align: center;
 }
 
 .Header h1 {
   color: #143b6b;
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 16px;
+}
+
+.logo {
+  width: 240px;
+  height: auto;
 }
 
 .logo path {

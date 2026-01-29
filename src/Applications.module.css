@@ -1,5 +1,14 @@
 .Applications {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  padding-bottom: 24px;
 }

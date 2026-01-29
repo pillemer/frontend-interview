@@ -1,23 +1,77 @@
 .SingleApplication {
   display: grid;
   grid-template-columns: 15% 15% auto 15% 15% 15%;
-  padding: 20px;
-
+  padding: 16px;
   background-color: white;
   box-shadow: 0px 5px 16px 0px rgba(173, 200, 215, 0.25);
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
 }
 
 .cell {
   text-align: left;
-  border-right: 1px solid #eee;
-  padding: 0 15px;
+  padding: 0 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cell:nth-child(n+4) {
+  text-align: right;
 }
 
 .cell sub {
   display: block;
-  font-size: 0.8rem;
-  color: #999;
+  font-size: 1rem;
+  color: #777;
   margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.emailLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .SingleApplication {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .cell {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+  }
+
+  .cell:nth-child(3n) {
+    border-right: none;
+  }
+
+  .cell:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+  .SingleApplication {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .cell {
+    padding: 12px 0;
+    border-right: none;
+  }
+
+  .cell:last-child {
+    border-bottom: none;
+  }
 }
